@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: cornflowerblue;
+    align-items: center;
+}
+
+input {
+    width: 92%;
+    border: none;
+    outline: none;
+}
+
+#TodoBox{
+    margin-bottom: 30px;
+}
+
+.TodoBox {
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #e3e4f1;
+
+}
+
+.circle {
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid #e3e4f1;
+    /*background-color: red;*/
+}
+
+p {
+    width: 92%;
+    vertical-align: middle;
+    padding: 5px 0 5px 0;
+}
+
+.TodoBoxes{
+    min-height:400px;
+    background-color: white;
+    margin-bottom: 30px;
+}
