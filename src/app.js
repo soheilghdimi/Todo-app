@@ -4,7 +4,7 @@ const todoInput = document.getElementsByClassName("create-todo")[0]
 const arr = [
     {
         name: "varzesh",
-        done: false,
+        done: true,
     }
     ,
     {
@@ -27,7 +27,9 @@ todoInput.addEventListener('keyup', (event) => {
 function buildTodo(obj) {
     return (`
         <div class="TodoBox">
-            <div class="circle" onclick="checked('${obj.name}')"></div>
+            <div class="circle" onclick="checked('${obj.name}')">
+            <img class="icon-done" src="../res/image/icon-done.svg">
+            </div>
             <p>${obj.name}</p>
         </div>
         `)
@@ -35,7 +37,15 @@ function buildTodo(obj) {
 
 const generateList = (arrInfo) => {
     return (arrInfo.map((item) => {
-            return (buildTodo(item))
+            console.log(item['done'])
+            if (item['done']) {
+                document.getElementsByClassName("circle")[0].classList.add('background: linear-gradient(to right, #55DDFF, #C058F3)')
+                return (buildTodo(item))
+            } else {
+                document.getElementsByClassName("circle")[0].classList.remove('background: linear-gradient(to right, #55DDFF, #C058F3)')
+                return (buildTodo(item))
+            }
+
         }).join(" ")
     )
 }
@@ -52,12 +62,12 @@ const handleInput = (event) => {
 
 }
 
-function checked(todoName){
-    for (let item of arr){
-        if (item['name'] === todoName){
-            item['done'] ? item['done'] = false : item['done']=true
+function checked(todoName) {
+    for (let item of arr) {
+        if (item['name'] === todoName) {
+            item['done'] ? item['done'] = false : item['done'] = true
         }
     }
-    
-    console.log(arr)
+
+
 }

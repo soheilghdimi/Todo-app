@@ -33,10 +33,18 @@ input {
 }
 
 .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     border-radius: 50%;
     border: 1px solid #e3e4f1;
-    /*background-color: red;*/
+
+}
+
+.icon-done{
+    display: none;
+    position: absolute;
 }
 
 p {

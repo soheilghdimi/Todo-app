@@ -1,0 +1,33 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+import * as React from "react";
+
+var _ref2 = /*#__PURE__*/React.createElement("path", {
+  fill: "#FFF",
+  fillRule: "evenodd",
+  d: "M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"
+});
+
+function SvgIconMoon(_ref, svgRef) {
+  var title = _ref.title,
+      titleId = _ref.titleId,
+      props = _objectWithoutProperties(_ref, ["title", "titleId"]);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 26,
+    height: 26,
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _ref2);
+}
+
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgIconMoon);
+export default __webpack_public_path__ + "static/media/icon-moon.6c03114b.svg";
+export { ForwardRef as ReactComponent };
